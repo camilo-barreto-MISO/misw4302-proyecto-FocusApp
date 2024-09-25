@@ -1,0 +1,46 @@
+<section
+  class="bg-surface-azul heigth-100 py-60 px-20 column align-items-center"
+>
+  <img width="235" src="/images/focus-app.png" alt="focus-app" />
+  <div class="mt-41 column width-100 justify-content-between heigth-100">
+    <mat-nav-list>
+      @for (item of items; track $index) {
+      <mat-list-item
+        routerLinkActive
+        #rla="routerLinkActive"
+        [activated]="rla.isActive"
+        [routerLink]="item.url"
+      >
+        <div class="row gap-12 align-items-center">
+          <mat-icon [class.mat-icon-outlined]="item.outlinedIcono">{{
+            item.icon
+          }}</mat-icon>
+          <label>{{ item.titulo }}</label>
+        </div>
+      </mat-list-item>
+      }
+    </mat-nav-list>
+    <div class="column gap-10">
+      <mat-divider></mat-divider>
+
+      <div class="row align-items-center gap-10">
+        <button
+          mat-icon-button
+          class="icon-button-primary"
+          routerLink="./Tareas/AgregarTarea"
+        >
+          <mat-icon class="mat-icon-outlined">settings</mat-icon>
+        </button>
+        <mat-nav-list>
+          <mat-list-item
+            routerLink="./Tareas/AgregarTarea"
+            routerLinkActive
+            #rla="routerLinkActive"
+            [activated]="rla.isActive"
+            ><label>Agregar tarea</label>
+          </mat-list-item></mat-nav-list
+        >
+      </div>
+    </div>
+  </div>
+</section>

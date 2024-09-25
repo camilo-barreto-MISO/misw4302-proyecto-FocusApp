@@ -15,7 +15,7 @@ $label: mat.m2-define-typography-level(
 
 $typography-global-config: map.merge(
   mat.m2-define-typography-config(
-    $font-family: 'Roboto',
+    $font-family: "Roboto",
     $headline-5:
       mat.m2-define-typography-level(
         $font-weight: 600,
@@ -43,8 +43,8 @@ $typography-global-config: map.merge(
       ),
   ),
   (
-    'h3': $h3,
-    'h4': $h4,
-    'label':$label
+    "h3": $h3,
+    "h4": $h4,
+    "label": $label,
   )
 );

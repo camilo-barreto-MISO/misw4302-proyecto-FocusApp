@@ -32,7 +32,12 @@
         </div>
       </div>
       <div class="column gap-42">
-        <button mat-flat-button>Iniciar sesión</button>
+        <button
+          mat-flat-button
+          [routerLink]="['./Pomodoro/Tareas/ListadoTareas']"
+        >
+          Iniciar sesión
+        </button>
 
         <p class="mat-button">
           ¿Aún no te has registrado?

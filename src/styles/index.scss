@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round");
+
 html {
   height: 100%;
 }
@@ -30,4 +32,12 @@ h5,
 .mat-h6,
 h6 {
   margin: 0;
+}
+
+:root {
+  --mat-sidenav-container-shape: 0;
+}
+
+.mat-icon-outlined {
+  font-family: "Material Icons Outlined" !important;
 }
