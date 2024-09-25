@@ -1,0 +1,40 @@
+.bg-surface-azul {
+  background-color: #f2f7ff;
+}
+
+.py-60 {
+  padding-block: 60px;
+}
+
+.px-20 {
+  padding-inline: 20px;
+}
+
+.mt-41 {
+  margin-top: 41px;
+}
+
+.gap-12 {
+  gap: 12px;
+}
+
+mat-list-item {
+  label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.mdc-list-item--activated {
+  label {
+    font-weight: 600;
+  }
+}
+
+.mdc-list {
+  padding: 0;
+}
+
+.gap-10 {
+  gap: 10px;
+}

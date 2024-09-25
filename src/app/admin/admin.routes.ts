@@ -11,6 +11,18 @@ export const AdminRoutes: Routes = [
         loadChildren: () =>
           import('../login/login.routes').then((routes) => routes.LoginRoutes),
       },
+      {
+        path: 'Pomodoro',
+        loadChildren: () =>
+          import('../pomodoro/pomodoro.routes').then(
+            (routes) => routes.PomodoRoutes
+          ),
+      },
+      {
+        path: '**',
+        redirectTo: '',
+        pathMatch: 'full',
+      },
     ],
   },
 ];
