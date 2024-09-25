@@ -17,6 +17,11 @@ export const TaskMobileRoutes: Routes = [
         path: 'Tareas',
         component: TaskListContainerComponent,
       },
+      {
+        path: '**',
+        redirectTo: 'Focus',
+        pathMatch: 'full',
+      },
     ],
   },
 ];

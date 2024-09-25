@@ -1,0 +1,62 @@
+.py-42 {
+  padding-block: 42px;
+}
+.py-10 {
+  padding-block: 10px;
+}
+
+.timer {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid #a4cce0;
+}
+
+.mt-33 {
+  margin-top: 33px;
+}
+.gap-5 {
+  gap: 5px;
+}
+.separador {
+  font-size: 32px;
+  line-height: 64px;
+  font-weight: 400;
+}
+
+.timer-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 40px;
+  font-size: 32px;
+  line-height: 52px;
+  height: 40px;
+}
+
+.text-ready {
+  font-size: 12px !important;
+  font-weight: 400;
+}
+.mt-18 {
+  margin-top: 18px;
+}
+
+.icono {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+
+.mt-51 {
+  margin-top: 51px;
+}
+
+.width-button {
+  width: 240px;
+}
+.timer-input::-webkit-outer-spin-button,
+.timer-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

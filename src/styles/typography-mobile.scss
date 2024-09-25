@@ -30,6 +30,7 @@ $typography-mobile-global-config: mat.m2-define-typography-config(
     mat.m2-define-typography-level(
       $font-weight: 400,
       $font-size: 13px,
+      $line-height: 20px,
     ),
   $button:
     mat.m2-define-typography-level(

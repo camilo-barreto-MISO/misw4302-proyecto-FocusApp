@@ -3,9 +3,8 @@
 
 :root {
   --mdc-checkbox-state-layer-size: 0;
-  --mdc-filled-button-container-height: 56px;
+
   --mdc-list-list-item-one-line-container-height: 56px;
-  --mdc-filled-button-label-text-size: 20px;
   --mdc-outlined-button-container-height: 56px;
   --mat-toolbar-standard-height: 56px;
   --mdc-switch-track-width: 40px;
@@ -25,6 +24,14 @@
 
   //mobile
   --mat-toolbar-mobile-height: 64px;
+
+  @media only screen and (min-width: 769px) {
+    --mdc-filled-button-container-height: 56px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    --mdc-filled-button-container-height: 40px;
+  }
 }
 
 .mdc-checkbox,
