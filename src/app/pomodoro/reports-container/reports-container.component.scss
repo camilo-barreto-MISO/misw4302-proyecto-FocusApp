@@ -1,0 +1,52 @@
+.gap-52 {
+  gap: 52px;
+}
+.gap-42 {
+  gap: 42px;
+}
+.radius-4 {
+  border-radius: 4px;
+}
+.width-toolbar {
+  width: 80.2%;
+}
+.toolbar-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.width-cards {
+  width: 90%;
+}
+
+.card {
+  border-radius: 4px;
+  padding-inline: 10px;
+  padding-block: 20px;
+  border-width: 2px;
+  border-style: dotted;
+  gap: 12px;
+  .cantidad {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  &-green {
+    border-color: #35bd3e;
+  }
+  &-yellow {
+    border-color: #f5e059;
+  }
+  &-pink {
+    border-color: #f7c4b7;
+  }
+}
+.width-reporte {
+  width: 93.8%;
+}
+.gap-47 {
+  gap: 47px;
+}
+
+a {
+  color: #1c4c68;
+}
