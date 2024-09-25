@@ -1,0 +1,59 @@
+.px-12 {
+  padding-inline: 12px;
+}
+.py-8 {
+  padding-block: 8px;
+}
+.gap-6 {
+  gap: 6px;
+}
+
+.navigation-bar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+.pt-12 {
+  padding-top: 12px;
+}
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+p,
+mat-icon {
+  font-weight: 400 !important;
+  color: #49454f !important;
+}
+
+.mat-mdc-list-base {
+  padding: 0;
+  display: flex;
+}
+
+.active {
+  .icon-container {
+    background-color: #a4cce0;
+  }
+  p,
+  mat-icon {
+    font-weight: 600 !important;
+    color: #1d1b20 !important;
+  }
+}
+
+.icon-container {
+  width: 64px;
+  height: 32px;
+  border-radius: 16px;
+}
+
+.bg-surface-azul {
+  background-color: #f2f7ff;
+}

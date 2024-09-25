@@ -7,6 +7,10 @@
   color: map-get($primary, 40);
 }
 
+.bg-primary {
+  background-color: map-get($primary, 40) !important;
+}
+
 .bg-tertiary {
   background: map-get($tertiary, 30) !important;
 }
@@ -19,4 +23,8 @@
 .icon-button-grey {
   background-color: #dadada !important;
   color: #001c38 !important;
+}
+
+.color-white {
+  color: #fff;
 }
