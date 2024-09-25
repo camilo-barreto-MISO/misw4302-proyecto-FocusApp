@@ -57,3 +57,7 @@
 .flex-1 {
   flex: 1;
 }
+.heigth-100-mobile {
+  min-height: 100vh;
+  height: calc(100% - (env(safe-area-inset-top) + env(safe-area-inset-bottom)));
+}

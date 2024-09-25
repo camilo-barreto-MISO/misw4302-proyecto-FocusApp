@@ -1,6 +1,8 @@
 @use "sass:map";
 @use "@angular/material" as mat;
+
 @import "./tipografias.scss";
+@import "./typography-mobile.scss";
 @import "./colores.scss";
 @include mat.core();
 
@@ -29,5 +31,10 @@ html {
   @include mat.core-theme($light-theme);
   @include mat.button-theme($light-theme);
   @include mat.all-component-themes($light-theme);
-  @include mat.all-component-typographies($typography-global-config);
+  @media only screen and (min-width: 769px) {
+    @include mat.all-component-typographies($typography-global-config);
+  }
+  @media only screen and (max-width: 768px) {
+    @include mat.all-component-typographies($typography-mobile-global-config);
+  }
 }

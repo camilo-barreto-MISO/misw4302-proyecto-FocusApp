@@ -1,0 +1,43 @@
+<section class="heigth-100-mobile">
+  <mat-toolbar class="px-12 py-8 bg-primary justify-content-end">
+    <div class="row align-items-center gap-6">
+      <h3 class="text-right color-white">
+        ¡Hola Usuario! <br />
+        Impulsa tu productividad hoy.
+      </h3>
+      <img width="40" src="/images/avatar.png" alt="avatar" />
+    </div>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+
+  <div class="navigation-bar bg-surface-azul">
+    <mat-nav-list class="row">
+      <div
+        class="column gap-4 pt-12 pb-16 width-50 align-items-center container"
+        routerLinkActive="active"
+        routerLink="./Focus"
+      >
+        <div
+          class="row align-items-center justify-content-center icon-container"
+        >
+          <mat-icon>schedule</mat-icon>
+        </div>
+        <p class="button-small">Focus</p>
+      </div>
+
+      <div
+        class="column gap-4 pt-12 pb-16 width-50 align-items-center container"
+        routerLinkActive="active"
+        routerLink="./Tareas"
+      >
+        <div
+          class="row align-items-center justify-content-center icon-container"
+        >
+          <mat-icon>list</mat-icon>
+        </div>
+        <p class="button-small">Tareas</p>
+      </div>
+    </mat-nav-list>
+  </div>
+</section>
