@@ -3,6 +3,21 @@
     <mat-drawer mode="side" opened>
       <app-navigation></app-navigation
     ></mat-drawer>
-    <mat-drawer-content> <router-outlet></router-outlet></mat-drawer-content>
+    <mat-drawer-content>
+      <section class="pt-40 pb-20 px-42 column gap-46">
+        <mat-toolbar class="px-0 justify-content-end">
+          <div class="row align-items-center gap-19">
+            <h2 class="text-right">
+              ¡Hola Usuario! <br />
+              Impulsa tu productividad hoy.
+            </h2>
+            <img width="64" src="/images/avatar.png" alt="avatar" />
+          </div>
+        </mat-toolbar>
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+      </section>
+    </mat-drawer-content>
   </mat-drawer-container>
 </section>
