@@ -1,3 +1,23 @@
+html {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  line-height: normal;
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  height: calc(100% - (env(safe-area-inset-top) + env(safe-area-inset-bottom)));
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
 h1,
 h2,
 h3,
@@ -9,5 +29,5 @@ p,
 h5,
 .mat-h6,
 h6 {
-  margin: 0 !important;
+  margin: 0;
 }

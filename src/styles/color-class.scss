@@ -1,0 +1,4 @@
+@import "./colores.scss";
+.bg-primary-95 {
+  background: map-get($primary, 95);
+}

@@ -1,0 +1,43 @@
+<section class="heigth-100vh row">
+  <div class="width-50">
+    <app-logo-container></app-logo-container>
+  </div>
+
+  <div class="width-50 column justify-content-center align-items-center">
+    <div class="column gap-42 width-100 align-items-center">
+      <h1>Inicio de sesión</h1>
+      <div class="column gap-7 width-input">
+        <div class="column gap-25">
+          <mat-form-field
+            appearance="outline"
+            class="width-100"
+            floatLabel="always"
+          >
+            <mat-label>Usuario</mat-label>
+            <input matInput placeholder="Nombre de usuario" />
+          </mat-form-field>
+
+          <mat-form-field
+            appearance="outline"
+            class="width-100"
+            floatLabel="always"
+          >
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" placeholder="xxxxxxxx" />
+          </mat-form-field>
+        </div>
+        <div class="row justify-content-between align-items-center px-6">
+          <mat-checkbox>Recordarme</mat-checkbox>
+          <p class="mat-body-2">¿Olvidaste tu contraseña?</p>
+        </div>
+      </div>
+      <div class="column gap-42">
+        <button mat-flat-button>Iniciar sesión</button>
+
+        <p class="mat-button">
+          ¿Aún no te has registrado? <a href="#"> Crear cuenta </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+:root {
+  --mdc-checkbox-state-layer-size: 0;
+  --mdc-filled-button-container-height: 56px;
+  --mdc-filled-button-label-text-size: 20px;
+}
+
+.mdc-checkbox,
+.mdc-checkbox__background,
+.mat-mdc-checkbox-touch-target {
+  flex: auto !important;
+  width: 12px !important;
+  height: 12px !important;
+}

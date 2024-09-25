@@ -7,5 +7,4 @@ describe('AppComponent', () => {
       imports: [AppComponent],
     }).compileComponents();
   });
-
 });
