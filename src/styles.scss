@@ -1,1 +1,6 @@
-@import './styles/main.scss'
+@import "./styles/main.scss";
+[class *="mat-mdc-form-field-subscript-wrapper"] {
+  &:not(:has(:only-child mat-hint, mat-error)) {
+    display: none;
+  }
+}

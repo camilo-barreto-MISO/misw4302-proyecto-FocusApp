@@ -1,91 +1,97 @@
-$primary :  (
+$primary: (
+  0: #000000,
+  10: #001c38,
+  20: #1b72c0,
+  25: #1a3f51,
+  30: #1c4c68,
+  35: #345769,
+  40: #1c4c68,
+  //#426F87
+  50: #6f92a6,
+  60: #9fb7c2,
+  70: #3480b1,
+  80: #5099c0,
+  90: #77b1ce,
+  95: #a4cce0,
+  98: #f5faff,
+  99: #d3e4ff,
+  100: #ffffff,
+);
+
+$secondary: (
+  0: #000000,
+  10: #1ea9a4,
+  20: #53e5e0,
+  30: #77b1ce,
+  40: #77b1ce,
+  //#ABD4D3
+  50: #6f92a6,
+  60: #a1edeb,
+  70: #c5f9f7,
+  80: #dafffe,
+  90: #87ccca,
+  95: #d6fffe,
+  99: #8fa796,
+  100: #b1cdb9,
+);
+
+$tertiary: (
+  0: #000000,
+  10: #0e1a11,
+  20: #366d46,
+  25: #004617,
+  30: #95e5ac,
+  35: #95e5ac,
+  //#006023
+  40: #c6f0d2,
+  50: #2aca59,
+  60: #bbd5c3,
+  70: #399654,
+  80: #a5f8bd,
+  90: #daf9e3,
+  95: #c8ead2,
+  98: #ebffe7,
+  99: #edfdf2,
+  100: #ffffff,
+);
+
+$neutral: (
+  0: #000000,
+  10: #1c1b1c,
+  20: #313030,
+  30: #484646,
+  40: #484646,
+  //#605E5E
+  50: #797676,
+  60: #939090,
+  70: #adaaaa,
+  80: #c9c6c5,
+  90: #e9eaec,
+  95: #f4f0ef,
+  99: #f3f4f9,
+  100: #ffffff,
+);
+
+$gris: (
+  (
     0: #000000,
-    10: #001C38,
-    20: #1B72C0,
-    25: #1a3f51,
-    30: #1C4C68,
-    35: #345769,
-    40: #1C4C68, //#426F87
-    50: #6F92A6,
-    60: #9FB7C2,
-    70: #3480B1,
-    80: #5099C0,
-    90: #77B1CE,
-    95: #A4CCE0,
-    98: #f5faff,
-    99: #D3E4FF,
+    10: #201a1b,
+    20: #352f30,
+    25: #413a3b,
+    30: #1c4c68,
+    35: #585052,
+    40: #645c5e,
+    50: #a4cce0,
+    60: #988e90,
+    70: #b3a9aa,
+    80: #cfc4c5,
+    90: #ebe0e1,
+    95: #faeeef,
+    98: #fff8f8,
+    99: #fffbff,
     100: #ffffff,
-  );
-
-  $secondary: (
-    0: #000000,
-    10: #1EA9A4,
-    20: #53E5E0, 
-    30: #77B1CE,
-    40: #77B1CE, //#ABD4D3
-    50: #6F92A6,
-    60: #A1EDEB,
-    70: #C5F9F7,
-    80: #DAFFFE,
-    90: #87CCCA,
-    95: #D6FFFE,
-    99: #8FA796,
-    100: #B1CDB9,
-  );
-
-  $tertiary:(
-    0: #000000,
-    10: #0E1A11,
-    20: #366D46,
-    25: #004617,
-    30: #95E5AC,
-    35: #95E5AC,//#006023
-    40: #C6F0D2,
-    50: #2ACA59,
-    60: #BBD5C3,
-    70: #399654,
-    80: #A5F8BD,
-    90: #DAF9E3,
-    95: #C8EAD2,
-    98: #ebffe7,
-    99: #EDFDF2,
-    100:#FFFFFF,
-  );
-
-  $neutral: (
-    0: #000000,
-    10: #1C1B1C,
-    20: #313030,
-    30: #484646,
-    40: #484646,//#605E5E
-    50: #797676,
-    60: #939090,
-    70: #ADAAAA,
-    80: #C9C6C5,
-    90: #E9EAEC,
-    95: #F4F0EF,
-    99: #F3F4F9,
-    100: #ffffff,
-  );
-
-  $gris: (
-    0: #000000,
-    10: #74777F,
-    20: #979797,
-    25: #363c40,
-    30: #DADADA,
-    35: #4d5357,
-    40: #7E7D80,
-    50: #D9D9D9,
-    60: #D5D5D5,
-    70: #F7F7F7F7,
-    80: #F3F3F3,
-    90: #dee3e8,
-    95: #ecf1f6,
-    98: #f5faff,
-    99: #fbfcff,
-    100: #ffffff,
-  );
+  )
+);
 $_palettes: (
   primary: $primary,
   secondary: $secondary,
@@ -112,13 +118,7 @@ $_palettes: (
   ),
 );
 
-$_rest: (
-  secondary: map.get($_palettes, secondary),
-  neutral: map.get($_palettes, neutral),
-  neutral-variant: map.get($_palettes,  gris),
-  error: map.get($_palettes, error),
-);
-
-$_primary: map.merge(map.get($_palettes, primary), $_rest);
-
-$_tertiary: map.merge(map.get($_palettes, tertiary), $_rest);
+:root {
+  --mdc-outlined-text-field-input-text-placeholder-color: #1d1b2066;
+  --mat-checkbox-label-text-color: #000000;
+}
