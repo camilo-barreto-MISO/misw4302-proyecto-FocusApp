@@ -122,4 +122,22 @@ $_palettes: (
   --mdc-outlined-text-field-input-text-placeholder-color: #1d1b2066;
   --mat-checkbox-label-text-color: #000000;
   --mdc-outlined-button-outline-color: map-get($primary, 40);
+  --mat-icon-color: #001c38;
+  --mdc-switch-unselected-track-color: #fff;
+  --mdc-switch-unselected-hover-track-color: #fff;
+  --mdc-switch-unselected-focus-track-color: #fff;
+  --mdc-switch-unselected-pressed-track-color: #fff;
+
+  --mdc-switch-unselected-handle-color: #1c4c68;
+  --mdc-switch-unselected-hover-handle-color: #1c4c68;
+  --mdc-switch-unselected-focus-handle-color: #1c4c68;
+  --mdc-switch-unselected-pressed-handle-color: #1c4c68;
+  --mdc-switch-unselected-icon-color: #1c4c68;
+  --mat-switch-track-outline-color: #1c4c68;
+  --mdc-switch-selected-track-color: #1c4c68;
+  --mdc-switch-selected-handle-color: #fff;
+  --mdc-switch-selected-hover-handle-color: #fff;
+  --mdc-switch-selected-focus-handle-color: #fff;
+  --mdc-switch-selected-pressed-handle-color: #fff;
+  --mdc-switch-selected-icon-color: #fff;
 }
