@@ -1,1 +1,31 @@
-<p>focus-container works!</p>
+<section class="py-42 column align-items-center">
+  <div class="py-10">
+    <h2 class="color-primary-10">Tarea 1</h2>
+  </div>
+
+  <div class="timer mt-33">
+    <div class="column align-items-center justify-content-center heigth-100">
+      <div class="column align-items-center gap-5">
+        <h3 class="color-tertiary">Focus</h3>
+        <div class="row align-items-center" [formGroup]="form">
+          <input class="timer-input" formControlName="hour" type="number" />
+          <p class="separador">:</p>
+          <input class="timer-input" formControlName="minute" type="number" />
+        </div>
+        <p class="text-ready color-primary-10">¿Ready?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-18">
+    <p class="mat-body-2">1 de 4 sesiones</p>
+  </div>
+  <div class="mt-51 width-button">
+    <button class="width-100" mat-flat-button>
+      Comenzar tarea
+      <mat-icon iconPositionEnd class="color-white icono mat-icon-outlined"
+        >play_arrow</mat-icon
+      >
+    </button>
+  </div>
+</section>

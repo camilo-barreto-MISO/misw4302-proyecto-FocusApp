@@ -11,6 +11,10 @@
   background-color: map-get($primary, 40) !important;
 }
 
+.color-tertiary {
+  color: map-get($tertiary, 30) !important;
+}
+
 .bg-tertiary {
   background: map-get($tertiary, 30) !important;
 }
@@ -27,4 +31,8 @@
 
 .color-white {
   color: #fff;
+}
+
+.color-primary-10 {
+  color: map-get($primary, 10);
 }
