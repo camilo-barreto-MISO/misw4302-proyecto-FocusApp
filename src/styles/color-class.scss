@@ -13,10 +13,10 @@
 
 .icon-button-primary {
   background-color: map-get($primary, 40) !important;
-  color: #fff !important;
+  --mat-icon-color: #fff;
 }
 
 .icon-button-grey {
   background-color: #dadada !important;
-  color: #000 !important;
+  color: #001c38 !important;
 }

@@ -26,7 +26,7 @@ export class NavigationComponent {
     {
       icon: 'settings',
       outlinedIcono: true,
-      titulo: 'Reportes',
+      titulo: 'Configuración',
       url: './Configuraciones',
     },
   ];
