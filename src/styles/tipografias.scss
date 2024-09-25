@@ -1,3 +1,13 @@
+$h3: mat.m2-define-typography-level(
+  $font-size: 20px,
+  $font-weight: 600,
+);
+
+h4 {
+  font-weight: 500 !important;
+  font-size: 20px !important;
+}
+
 $typography-global-config: mat.m2-define-typography-config(
   $font-family: "Roboto",
   $headline-5:
@@ -9,6 +19,16 @@ $typography-global-config: mat.m2-define-typography-config(
     mat.m2-define-typography-level(
       $font-weight: 400,
       $font-size: 22px,
+    ),
+  $subtitle-1:
+    mat.m2-define-typography-level(
+      $font-size: 20px,
+      $font-weight: 600,
+    ),
+  $subtitle-2:
+    mat.m2-define-typography-level(
+      $font-weight: 500,
+      $font-size: 20px,
     ),
   $body-1:
     mat.m2-define-typography-level(
@@ -23,15 +43,10 @@ $typography-global-config: mat.m2-define-typography-config(
   $button:
     mat.m2-define-typography-level(
       $font-weight: 500,
-      $font-size: 14px,
+      $font-size: 20px,
     ),
 );
-h3 {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-h4 {
+a {
   font-size: 20px;
   font-weight: 500;
 }
