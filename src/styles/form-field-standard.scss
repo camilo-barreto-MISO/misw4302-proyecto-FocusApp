@@ -1,0 +1,48 @@
+.mat-mdc-form-field.standard {
+  --mat-form-field-container-height: 56px !important;
+  .mdc-floating-label {
+    transform: translateY(0%);
+
+    &:not(.mdc-floating-label--float-above) {
+      top: 50%;
+      bottom: 0;
+    }
+
+    &.mdc-floating-label--float-above {
+      transform: translateY(-50%) scale(0.75);
+    }
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled),
+  .mat-mdc-form-field-focus-overlay {
+    background-color: transparent;
+  }
+
+  .mat-icon,
+  .mdc-text-field {
+    padding: 0 !important;
+
+    &:not(.mdc-text-field) {
+      vertical-align: text-bottom;
+    }
+  }
+
+  input,
+  mat-select,
+  [class^="mat-mdc-select-arrow"] {
+    align-self: flex-end;
+
+    &:not(input, mat-select) {
+      height: min-content;
+    }
+  }
+
+  [class*="mat-mdc-form-field-infix"] {
+    display: inline-flex;
+  }
+
+  [class^="mat-mdc-form-field-icon-"],
+  [class^="mat-mdc-form-field-text-"] {
+    align-self: baseline;
+  }
+}

@@ -3,7 +3,16 @@
   background: map-get($primary, 95);
 }
 
+.color-primary {
+  color: map-get($primary, 40);
+}
+
 .icon-button-primary {
   background-color: map-get($primary, 40) !important;
   color: #fff !important;
+}
+
+.icon-button-grey {
+  background-color: #dadada !important;
+  color: #000 !important;
 }

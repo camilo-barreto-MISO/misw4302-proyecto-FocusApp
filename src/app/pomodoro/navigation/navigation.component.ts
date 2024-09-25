@@ -15,7 +15,7 @@ export class NavigationComponent {
     {
       icon: 'list',
       titulo: 'Tareas',
-      url: './Tareas/ListadoTareas',
+      url: './Tareas',
     },
     {
       icon: 'bar_chart',

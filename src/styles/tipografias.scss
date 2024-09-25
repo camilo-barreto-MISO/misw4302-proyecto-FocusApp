@@ -1,8 +1,3 @@
-$h3: mat.m2-define-typography-level(
-  $font-size: 20px,
-  $font-weight: 600,
-);
-
 $h4: mat.m2-define-typography-level(
   $font-weight: 500,
   $font-size: 20px,
@@ -43,8 +38,11 @@ $typography-global-config: map.merge(
       ),
   ),
   (
-    "h3": $h3,
     "h4": $h4,
     "label": $label,
   )
 );
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}

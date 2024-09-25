@@ -1,12 +1,28 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ModulosMaterial } from '../../modulos.material';
+
+interface Tarea {
+  nombre: string;
+}
 
 @Component({
   selector: 'app-task-list-container',
   standalone: true,
-  imports: [],
+  imports: [ModulosMaterial, RouterModule],
   templateUrl: './task-list-container.component.html',
-  styleUrl: './task-list-container.component.scss'
+  styleUrl: './task-list-container.component.scss',
 })
 export class TaskListContainerComponent {
-
+  listadoTareas: Tarea[] = [
+    {
+      nombre: 'Tarea 1',
+    },
+    {
+      nombre: 'Tarea 2',
+    },
+    {
+      nombre: 'Tarea 3',
+    },
+  ];
 }

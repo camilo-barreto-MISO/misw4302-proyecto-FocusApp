@@ -1,1 +1,29 @@
-<section class="bg-surface-azul"><H1>hols</H1></section>
+<div class="column gap-52 align-items-center">
+  <div class="row justify-content-between align-items-center width-100">
+    <h3 class="color-primary">Tareas</h3>
+    <p class="text">07 de Septiembre, 2024 &nbsp; &nbsp; 01:22 pm</p>
+  </div>
+  <div class="width-lista column gap-32">
+    @for (tarea of listadoTareas; track $index) {
+    <div class="row justify-content-between">
+      <mat-form-field class="width-form">
+        <mat-label>{{ tarea.nombre }}</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <div class="row align-items-center gap-20">
+        <button
+          mat-icon-button
+          class="icon-button-grey"
+          routerLink="./EditarTarea"
+        >
+          <mat-icon class="mat-icon-outlined">edit</mat-icon>
+        </button>
+        <button mat-icon-button class="icon-button-grey">
+          <mat-icon class="mat-icon-outlined">alarm_off</mat-icon>
+        </button>
+      </div>
+    </div>
+    }
+  </div>
+</div>

@@ -4,6 +4,7 @@ import { AdminContainerComponent } from './admin-container/admin-container.compo
 import { ReportsContainerComponent } from './reports-container/reports-container.component';
 import { SettingsContainerComponent } from './settings-container/settings-container.component';
 import { TaskListContainerComponent } from './task-list-container/task-list-container.component';
+import { UpdateTaskContainerComponent } from './update-task-container/update-task-container.component';
 
 export const PomodoRoutes: Routes = [
   {
@@ -14,14 +15,18 @@ export const PomodoRoutes: Routes = [
         path: 'Tareas',
         children: [
           {
-            path: 'AgregarTarea',
-            component: AddTaskContainerComponent,
-          },
-          {
-            path: 'ListadoTareas',
+            path: '',
             component: TaskListContainerComponent,
           },
+          {
+            path: 'EditarTarea',
+            component: UpdateTaskContainerComponent,
+          },
         ],
+      },
+      {
+        path: 'AgregarTarea',
+        component: AddTaskContainerComponent,
       },
       {
         path: 'Reportes',
