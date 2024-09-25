@@ -1,0 +1,124 @@
+$primary :  (
+    0: #000000,
+    10: #001C38,
+    20: #1B72C0,
+    25: #1a3f51,
+    30: #1C4C68,
+    35: #345769,
+    40: #1C4C68, //#426F87
+    50: #6F92A6,
+    60: #9FB7C2,
+    70: #3480B1,
+    80: #5099C0,
+    90: #77B1CE,
+    95: #A4CCE0,
+    98: #f5faff,
+    99: #D3E4FF,
+    100: #ffffff,
+  );
+
+  $secondary: (
+    0: #000000,
+    10: #1EA9A4,
+    20: #53E5E0, 
+    30: #77B1CE,
+    40: #77B1CE, //#ABD4D3
+    50: #6F92A6,
+    60: #A1EDEB,
+    70: #C5F9F7,
+    80: #DAFFFE,
+    90: #87CCCA,
+    95: #D6FFFE,
+    99: #8FA796,
+    100: #B1CDB9,
+  );
+
+  $tertiary:(
+    0: #000000,
+    10: #0E1A11,
+    20: #366D46,
+    25: #004617,
+    30: #95E5AC,
+    35: #95E5AC,//#006023
+    40: #C6F0D2,
+    50: #2ACA59,
+    60: #BBD5C3,
+    70: #399654,
+    80: #A5F8BD,
+    90: #DAF9E3,
+    95: #C8EAD2,
+    98: #ebffe7,
+    99: #EDFDF2,
+    100:#FFFFFF,
+  );
+
+  $neutral: (
+    0: #000000,
+    10: #1C1B1C,
+    20: #313030,
+    30: #484646,
+    40: #484646,//#605E5E
+    50: #797676,
+    60: #939090,
+    70: #ADAAAA,
+    80: #C9C6C5,
+    90: #E9EAEC,
+    95: #F4F0EF,
+    99: #F3F4F9,
+    100: #ffffff,
+  );
+
+  $gris: (
+    0: #000000,
+    10: #74777F,
+    20: #979797,
+    25: #363c40,
+    30: #DADADA,
+    35: #4d5357,
+    40: #7E7D80,
+    50: #D9D9D9,
+    60: #D5D5D5,
+    70: #F7F7F7F7,
+    80: #F3F3F3,
+    90: #dee3e8,
+    95: #ecf1f6,
+    98: #f5faff,
+    99: #fbfcff,
+    100: #ffffff,
+  );
+$_palettes: (
+  primary: $primary,
+  secondary: $secondary,
+  tertiary: $tertiary,
+  neutral: $neutral,
+  gris: $gris,
+  error: (
+    0: #000000,
+    10: #410002,
+    20: #690005,
+    25: #7e0007,
+    30: #93000a,
+    35: #a80710,
+    40: #ba1a1a,
+    50: #de3730,
+    60: #ff5449,
+    70: #ff897d,
+    80: #ffb4ab,
+    90: #ffdad6,
+    95: #ffedea,
+    98: #fff8f7,
+    99: #fffbff,
+    100: #ffffff,
+  ),
+);
+
+$_rest: (
+  secondary: map.get($_palettes, secondary),
+  neutral: map.get($_palettes, neutral),
+  neutral-variant: map.get($_palettes,  gris),
+  error: map.get($_palettes, error),
+);
+
+$_primary: map.merge(map.get($_palettes, primary), $_rest);
+
+$_tertiary: map.merge(map.get($_palettes, tertiary), $_rest);

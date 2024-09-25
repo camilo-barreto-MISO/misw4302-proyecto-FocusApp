@@ -1,0 +1,22 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+@import "./tipografias.scss";
+@import "./colores.scss";
+@include mat.core();
+
+$light-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: $_primary,
+      tertiary: $_tertiary,
+    ),
+  )
+);
+
+
+html {
+  @include mat.core-theme($light-theme);
+  @include mat.button-theme($light-theme);
+  @include mat.all-component-typographies($typography-global-config);
+}
