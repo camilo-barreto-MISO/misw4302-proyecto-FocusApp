@@ -1,48 +1,37 @@
-$h4: mat.m2-define-typography-level(
-  $font-weight: 500,
-  $font-size: 20px,
-);
-
-$label: mat.m2-define-typography-level(
-  $font-weight: 400,
-  $font-size: 16px,
-);
-
-$typography-global-config: map.merge(
-  mat.m2-define-typography-config(
-    $font-family: "Roboto",
-    $headline-5:
-      mat.m2-define-typography-level(
-        $font-weight: 600,
-        $font-size: 24px,
-      ),
-    $headline-6:
-      mat.m2-define-typography-level(
-        $font-weight: 400,
-        $font-size: 22px,
-      ),
-    $body-1:
-      mat.m2-define-typography-level(
-        $font-weight: 400,
-        $font-size: 18px,
-      ),
-    $body-2:
-      mat.m2-define-typography-level(
-        $font-weight: 400,
-        $font-size: 12px,
-      ),
-    $button:
-      mat.m2-define-typography-level(
-        $font-weight: 500,
-        $font-size: 14px,
-      ),
-  ),
-  (
-    "h4": $h4,
-    "label": $label,
-  )
+$typography-global-config: mat.m2-define-typography-config(
+  $font-family: "Roboto",
+  $headline-5:
+    mat.m2-define-typography-level(
+      $font-weight: 600,
+      $font-size: 24px,
+    ),
+  $headline-6:
+    mat.m2-define-typography-level(
+      $font-weight: 400,
+      $font-size: 22px,
+    ),
+  $body-1:
+    mat.m2-define-typography-level(
+      $font-weight: 400,
+      $font-size: 18px,
+    ),
+  $body-2:
+    mat.m2-define-typography-level(
+      $font-weight: 400,
+      $font-size: 12px,
+    ),
+  $button:
+    mat.m2-define-typography-level(
+      $font-weight: 500,
+      $font-size: 14px,
+    ),
 );
 h3 {
   font-size: 20px;
   font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
 }

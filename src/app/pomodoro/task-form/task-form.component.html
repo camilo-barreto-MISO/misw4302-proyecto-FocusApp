@@ -1,0 +1,72 @@
+<section class="column align-items-center" [formGroup]="formulario">
+  <div class="width-form column gap-25">
+    <mat-form-field floatLabel="always" appearance="outline" class="width-100">
+      <mat-label>Nombre de la tarea</mat-label>
+      <input
+        formControlName="nombreTarea"
+        matInput
+        placeholder="Nombre de la tarea"
+      />
+    </mat-form-field>
+    <div class="row gap-25 align-items-center">
+      <mat-form-field class="flex-1" floatLabel="always" appearance="outline">
+        <mat-label>Fecha</mat-label>
+        <input formControlName="fecha" matInput placeholder="dd/mm/yyyy" />
+      </mat-form-field>
+      <mat-form-field class="flex-1" floatLabel="always" appearance="outline">
+        <mat-label> Hora</mat-label>
+        <input formControlName="hora" matInput placeholder="00:00 am/pm" />
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="mt-34 column gap-28 width-100">
+    <h4>Seleccionar categoría</h4>
+    <div class="row justify-content-evenly">
+      @for (categoria of categorias; track $index) {
+      <div class="column align-items-center gap-20">
+        <div
+          class="row justify-content-center align-items-center bg-tertiary categoria"
+        >
+          <img width="59" height="48" [src]="categoria.imagen" />
+        </div>
+        <p class="text-categoria color-primary">{{ categoria.titulo }}</p>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="column mt-25 gap-25 width-100">
+    <h4>Sesiones pomodoro</h4>
+    <div class="column align-items-center width-100">
+      <div class="width-form">
+        <mat-form-field
+          class="width-100"
+          floatLabel="always"
+          appearance="outline"
+        >
+          <mat-label> Cantidad de sesiones</mat-label>
+          <input
+            formControlName="cantidadSecciones"
+            matInput
+            placeholder="Escribe la cantidad de sesiones de pomodoros"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="column align-items-center width-100 mt-25">
+    @if (esEdicion) {
+    <div class="row align-items-center width-button gap-30">
+      <button mat-flat-button routerLink="../" class="flex-1">Guardar</button>
+      <button mat-stroked-button routerLink="../" class="flex-1">
+        Eliminar tarea
+      </button>
+    </div>
+    }@else {
+    <button routerLink="../Tareas" mat-flat-button class="width-form">
+      Agregar tarea
+    </button>
+    }
+  </div>
+</section>

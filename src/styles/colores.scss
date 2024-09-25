@@ -121,4 +121,5 @@ $_palettes: (
 :root {
   --mdc-outlined-text-field-input-text-placeholder-color: #1d1b2066;
   --mat-checkbox-label-text-color: #000000;
+  --mdc-outlined-button-outline-color: map-get($primary, 40);
 }
