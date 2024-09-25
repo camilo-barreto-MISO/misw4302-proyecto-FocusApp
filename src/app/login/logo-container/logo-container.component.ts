@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   template: `<div
     class="bg-primary-95 column heigth-100 justify-content-center align-items-center"
   >
-    <img width="235" src="/images/focus-app.svg" alt="focus-app" />
+    <img width="235" src="/images/focus-app.png" alt="focus-app" />
     <img
       width="70%"
       src="/images/people-in-office.svg"

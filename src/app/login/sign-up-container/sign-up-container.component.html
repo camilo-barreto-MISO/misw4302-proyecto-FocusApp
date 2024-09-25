@@ -1,0 +1,71 @@
+<section class="heigth-100vh row">
+  <div class="width-50">
+    <app-logo-container></app-logo-container>
+  </div>
+
+  <div class="width-50 column justify-content-center py-42 align-items-center">
+    <div class="column width-100 align-items-center gap-42">
+      <h1>Crear cuenta</h1>
+      <div class="column gap-13 width-input">
+        <div class="column gap-13">
+          <mat-form-field
+            appearance="outline"
+            class="width-100"
+            floatLabel="always"
+          >
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre de usuario" />
+          </mat-form-field>
+
+          <mat-form-field
+            appearance="outline"
+            class="width-100"
+            floatLabel="always"
+          >
+            <mat-label>Apellido</mat-label>
+            <input matInput placeholder="Apellido del usuario" />
+          </mat-form-field>
+
+          <mat-form-field
+            appearance="outline"
+            class="width-100"
+            floatLabel="always"
+          >
+            <mat-label>Correo</mat-label>
+            <input matInput type="email" placeholder="correo@gmail.com" />
+          </mat-form-field>
+
+          <mat-form-field
+            appearance="outline"
+            class="width-100"
+            floatLabel="always"
+          >
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" placeholder="xxxxxxxx" />
+          </mat-form-field>
+
+          <mat-form-field
+            appearance="outline"
+            class="width-100"
+            floatLabel="always"
+          >
+            <mat-label>Confirmar contraseña</mat-label>
+            <input matInput type="password" placeholder="xxxxxxxx" />
+          </mat-form-field>
+        </div>
+        <mat-checkbox class="px-6"
+          >Para continuar acepta términos y condiciones y nuestra política de
+          privacidad.</mat-checkbox
+        >
+      </div>
+      <div class="column gap-42">
+        <button mat-flat-button>Registrarme</button>
+
+        <p class="mat-button">
+          Ya tengo una cuenta.
+          <a [routerLink]="['../']"> Iniciar sesión</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
