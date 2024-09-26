@@ -5,7 +5,7 @@
   --mdc-checkbox-state-layer-size: 0;
 
   --mdc-list-list-item-one-line-container-height: 56px;
-  --mdc-outlined-button-container-height: 56px;
+
   --mat-toolbar-standard-height: 56px;
   --mdc-switch-track-width: 40px;
   --mat-switch-with-icon-handle-size: 14px;
@@ -22,15 +22,18 @@
   --mat-switch-selected-with-icon-handle-horizontal-margin: 0 -4px;
   --mdc-switch-state-layer-size: 14px;
 
+  //desktop
+  @media only screen and (min-width: 769px) {
+    --mdc-filled-button-container-height: 56px;
+    --mdc-outlined-button-container-height: 56px;
+  }
+
   //mobile
   --mat-toolbar-mobile-height: 64px;
 
-  @media only screen and (min-width: 769px) {
-    --mdc-filled-button-container-height: 56px;
-  }
-
   @media only screen and (max-width: 768px) {
     --mdc-filled-button-container-height: 40px;
+    --mdc-outlined-button-container-height: 40px;
   }
 }
 

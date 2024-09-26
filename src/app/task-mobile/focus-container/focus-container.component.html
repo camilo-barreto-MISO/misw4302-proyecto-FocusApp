@@ -3,29 +3,105 @@
     <h2 class="color-primary-10">Tarea 1</h2>
   </div>
 
-  <div class="timer mt-33">
-    <div class="column align-items-center justify-content-center heigth-100">
-      <div class="column align-items-center gap-5">
-        <h3 class="color-tertiary">Focus</h3>
-        <div class="row align-items-center" [formGroup]="form">
-          <input class="timer-input" formControlName="hour" type="number" />
-          <p class="separador">:</p>
-          <input class="timer-input" formControlName="minute" type="number" />
+  <div [ngClass]="{ 'mt-10 green': isStartBreak }" class="mt-33">
+    <div [class.opacity-0]="mostrarCargando" class="spinner">
+      <div class="leftWrapper">
+        <div class="left">
+          <div class="circle"></div>
         </div>
-        <p class="text-ready color-primary-10">¿Ready?</p>
+      </div>
+      <div class="timer">
+        <div
+          class="column align-items-center justify-content-center height-100"
+        >
+          <div class="column align-items-center gap-5">
+            <h3 class="color-tertiary">Focus</h3>
+            @if (!isRunning) {
+            <div class="row align-items-center" [formGroup]="form">
+              <input
+                class="timer-input"
+                formControlName="minutes"
+                type="number"
+              />
+              <p class="separador">:</p>
+              <input
+                class="timer-input"
+                formControlName="seconds"
+                type="number"
+              />
+            </div>
+            <p class="text-ready color-primary-10">¿Ready?</p>
+            } @else {
+            <div class="row align-items-center">
+              <p class="timer-input">{{ minutes }}</p>
+              <p class="separador-stop">:</p>
+              <p class="timer-input">{{ seconds }}</p>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+      <div class="rightWrapper">
+        <div class="right">
+          <div class="circle"></div>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="mt-18">
-    <p class="mat-body-2">1 de 4 sesiones</p>
+    <p class="mat-body-2">{{ statusText }}</p>
   </div>
-  <div class="mt-51 width-button">
-    <button class="width-100" mat-flat-button>
-      Comenzar tarea
-      <mat-icon iconPositionEnd class="color-white icono mat-icon-outlined"
-        >play_arrow</mat-icon
-      >
-    </button>
+  <div [class.mt-31]="isStartBreak" class="mt-51">
+    @switch (statusFocus) { @case (TaskStatus.startTask) {
+    <div class="width-button">
+      <button class="width-100" mat-flat-button (click)="startTask()">
+        Comenzar tarea
+        <mat-icon iconPositionEnd class="color-white icono mat-icon-outlined"
+          >play_arrow</mat-icon
+        >
+      </button>
+    </div>
+    } @case (TaskStatus.running) {
+    <div>
+      <div class="row width-100 gap-16 align-items-center">
+        <button
+          class="width-button-pause"
+          (click)="toggleTimer()"
+          mat-flat-button
+        >
+          Pausa
+          <mat-icon iconPositionEnd class="color-white">pause</mat-icon>
+        </button>
+        <button
+          class="width-button-pause"
+          (click)="startBreak()"
+          mat-stroked-button
+        >
+          Continuar
+          <mat-icon iconPositionEnd class="icono mat-icon-outlined"
+            >play_arrow</mat-icon
+          >
+        </button>
+      </div>
+    </div>
+    } @case (TaskStatus.startBreak) {
+    <div>
+      <div class="column width-100 gap-16 align-items-center width-button">
+        <button class="width-100" (click)="toggleTimer()" mat-flat-button>
+          Comenzar descanso
+          <mat-icon iconPositionEnd class="color-white icono mat-icon-outlined"
+            >play_arrow</mat-icon
+          >
+        </button>
+        <button class="width-100" mat-stroked-button>
+          Omitir descanso
+          <mat-icon iconPositionEnd class="icono mat-icon-outlined"
+            >play_arrow</mat-icon
+          >
+        </button>
+      </div>
+    </div>
+    } }
   </div>
 </section>
