@@ -1,0 +1,66 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+.px-12 {
+  padding-inline: 12px;
+}
+.py-8 {
+  padding-block: 8px;
+}
+.gap-6 {
+  gap: 6px;
+}
+
+.mt-28 {
+  margin-top: 28px;
+}
+
+.width-paginator {
+  border-radius: 4px;
+  --mat-toolbar-mobile-height: 40px;
+  width: 260px;
+}
+.toolbar-text {
+  font-weight: 700;
+}
+
+.width-tareas {
+  width: 290px;
+}
+
+.title-tareas {
+  font-weight: 500 !important;
+}
+
+.gap-22 {
+  gap: 22px;
+}
+
+.button-form {
+  width: 120px;
+  --mdc-filled-button-container-height: 28px;
+}
+
+.form {
+  --mat-form-field-container-height: 38px;
+  --mat-form-field-filled-with-label-container-padding-top: 12px;
+  --mat-form-field-filled-with-label-container-padding-bottom: 4px;
+  --mdc-filled-text-field-label-text-color: #000;
+}
+
+.gap-23 {
+  gap: 23px;
+}
+
+.mat-icon-button {
+  --mdc-icon-button-state-layer-size: 40px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}

@@ -1,9 +1,21 @@
+<mat-toolbar class="px-12 py-8 bg-primary justify-content-end">
+  <div class="row align-items-center gap-6">
+    <h3 class="text-right color-white">
+      ¡Hola Usuario! <br />
+      Impulsa tu productividad hoy.
+    </h3>
+    <img width="40" src="/images/avatar.png" alt="avatar" />
+  </div>
+</mat-toolbar>
+
 <section class="py-42 column align-items-center">
+  @if(!starPomodoro){
   <div class="py-10">
     <h2 class="color-primary-10">Tarea 1</h2>
   </div>
+  }
 
-  <div [ngClass]="{ 'mt-10 green': isStartBreak }" class="mt-33">
+  <div [ngClass]="{ 'mt-10 green': isStartBreak, 'mt-33': !starPomodoro }">
     <div [class.opacity-0]="mostrarCargando" class="spinner">
       <div class="leftWrapper">
         <div class="left">
@@ -16,7 +28,7 @@
         >
           <div class="column align-items-center gap-5">
             <h3 class="color-tertiary">Focus</h3>
-            @if (!isRunning) {
+            @if (!isRunning ) {
             <div class="row align-items-center" [formGroup]="form">
               <input
                 class="timer-input"
@@ -49,11 +61,30 @@
     </div>
   </div>
 
+  @if(starPomodoro){
+  <div class="mt-26">
+    <p class="mat-body-2 text-center width-text">
+      ¡Es hora de concentrarse! Inicia tu Pomodoro y enfócate durante 25
+      minutos.
+    </p>
+  </div>
+  }@else{
   <div class="mt-18">
     <p class="mat-body-2">{{ statusText }}</p>
   </div>
+  }
+
   <div [class.mt-31]="isStartBreak" class="mt-51">
-    @switch (statusFocus) { @case (TaskStatus.startTask) {
+    @switch (statusFocus) { @case (TaskStatus.startTask) { @if(starPomodoro){
+    <div class="width-button">
+      <button class="width-100" mat-flat-button (click)="startBreak()">
+        Comenzar pomodoro
+        <mat-icon iconPositionEnd class="color-white icono mat-icon-outlined"
+          >play_arrow</mat-icon
+        >
+      </button>
+    </div>
+    }@else{
     <div class="width-button">
       <button class="width-100" mat-flat-button (click)="startTask()">
         Comenzar tarea
@@ -62,7 +93,7 @@
         >
       </button>
     </div>
-    } @case (TaskStatus.running) {
+    } } @case (TaskStatus.running) {
     <div>
       <div class="row width-100 gap-16 align-items-center">
         <button
