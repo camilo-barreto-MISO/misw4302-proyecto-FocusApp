@@ -5,22 +5,35 @@
   padding-block: 10px;
 }
 
-.timer {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 6px solid #a4cce0;
+.opacity-0 {
+  & .right,
+  .rightWrapper,
+  .left,
+  .leftWrapper {
+    opacity: 1;
+  }
 }
 
 .mt-33 {
   margin-top: 33px;
 }
+
+.mt-10 {
+  margin-top: 10px;
+}
+
 .gap-5 {
   gap: 5px;
 }
 .separador {
   font-size: 32px;
-  line-height: 64px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.separador-stop {
+  font-size: 32px;
+  line-height: 32px;
   font-weight: 400;
 }
 
@@ -32,6 +45,7 @@
   font-size: 32px;
   line-height: 52px;
   height: 40px;
+  text-align: center;
 }
 
 .text-ready {
@@ -52,6 +66,10 @@
   margin-top: 51px;
 }
 
+.mt-31 {
+  margin-top: 31px;
+}
+
 .width-button {
   width: 240px;
 }
@@ -59,4 +77,24 @@
 .timer-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.width-button-pause {
+  --mat-outlined-button-horizontal-padding: 8px;
+  width: 116px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.green {
+  .spinner::before {
+    content: "";
+    border: 6px solid #95e5ac;
+  }
+
+  .circle {
+    border: 6px solid #366d46;
+  }
 }
