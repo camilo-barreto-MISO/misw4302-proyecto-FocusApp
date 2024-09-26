@@ -9,7 +9,7 @@ const childrenMobile = () =>
     (routes) => routes.AdminMobileRoutes
   );
 
-const children = !Capacitor.isNativePlatform()
+const children = Capacitor.isNativePlatform()
   ? childrenMobile
   : childrenDesktop;
 
