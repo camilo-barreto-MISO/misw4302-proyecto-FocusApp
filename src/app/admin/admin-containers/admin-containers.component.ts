@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   template: `
-    <main>
+    <main class="display-none-s">
       <router-outlet></router-outlet>
     </main>
   `,
