@@ -126,5 +126,6 @@ Antes de ejecutar la aplicación móvil, asegúrate de tener lo siguiente:
 
 ## 📦 APK Aplicación
 
-[Descargar apk](./apk/focusapp.apk)
-[Video FocusApp en dispositivo android tema oscuro](https://drive.google.com/file/d/1kTk54--J2zPJyqyJqVZ-y_SCgOHmmHsc/view?usp=sharing)
+- [Descargar apk](./apk/focusapp.apk)
+
+- [Video FocusApp en dispositivo android tema oscuro](https://drive.google.com/file/d/1kTk54--J2zPJyqyJqVZ-y_SCgOHmmHsc/view?usp=sharing)
