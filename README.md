@@ -20,7 +20,7 @@ El proyecto está organizado en dos versiones, una para la web y otra para dispo
 
 - **task-mobile**: Contiene las funcionalidades de la aplicación móvil, diseñada para que los usuarios gestionen y realicen sus tareas diarias utilizando la técnica Pomodoro. Las principales funcionalidades móviles incluyen iniciar tareas, gestionar descansos y visualizar listas de tareas diarias.
 
-    ![](./imagenes-md\archivosMobile.png)
+    ![](./imagenes-md/archivosMobile.png)
 
 ### Módulos principales:
 
