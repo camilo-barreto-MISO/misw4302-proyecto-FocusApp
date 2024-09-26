@@ -27,6 +27,7 @@
     "@capacitor/angular": "^2.0.3",
     "@capacitor/core": "^6.1.2",
     "@capacitor/ios": "^6.1.2",
+    "@capacitor/splash-screen": "^6.0.2",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
