@@ -87,6 +87,7 @@ Sigue los siguientes pasos para ejecutar la aplicación web localmente:
 
 4. La aplicación estará disponible en el navegador en la dirección predeterminada: `http://localhost:4200`.
 
+[Video ejecución Webapp](https://drive.google.com/file/d/1cl0oXYmFshnwpeVA2-58UNBy2pKenvb_/view?usp=sharing)
 
 
 ##  📱 Ejecución Mobile App
@@ -121,6 +122,9 @@ Antes de ejecutar la aplicación móvil, asegúrate de tener lo siguiente:
 
 5. Una vez que Android Studio esté abierto, puedes compilar y ejecutar la aplicación en un emulador o dispositivo físico que tenga **API 35 o superior**.
 
+[Video ejecucion App mobile](https://drive.google.com/file/d/1GydTZwkZvGHdOZQRTaGpjqTM2Kt_TyOa/view?usp=sharing)
+
 ## 📦 APK Aplicación
 
 [Descargar apk](./apk/focusapp.apk)
+[Video FocusApp en dispositivo android tema oscuro](https://drive.google.com/file/d/1kTk54--J2zPJyqyJqVZ-y_SCgOHmmHsc/view?usp=sharing)
