@@ -1,3 +1,13 @@
+.px-12 {
+  padding-inline: 12px;
+}
+.py-8 {
+  padding-block: 8px;
+}
+.gap-6 {
+  gap: 6px;
+}
+
 .py-42 {
   padding-block: 42px;
 }
@@ -97,4 +107,11 @@
   .circle {
     border: 6px solid #366d46;
   }
+}
+.width-text {
+  width: 200px;
+}
+
+.mt-26 {
+  margin-top: 26px;
 }

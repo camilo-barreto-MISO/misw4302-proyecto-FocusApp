@@ -32,8 +32,13 @@
   --mat-toolbar-mobile-height: 64px;
 
   @media only screen and (max-width: 768px) {
+    .mdc-text-field {
+      padding: 0 !important;
+    }
+
     --mdc-filled-button-container-height: 40px;
     --mdc-outlined-button-container-height: 40px;
+    --mdc-icon-button-state-layer-size: 48px;
   }
 }
 

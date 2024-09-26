@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 import { ModulosMaterial } from '../../modulos.material';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 
@@ -18,12 +19,13 @@ enum TaskStatus {
   templateUrl: './focus-container.component.html',
   styleUrls: ['./focus-container.component.scss'],
 })
-export class FocusContainerComponent {
+export class FocusContainerComponent implements OnInit {
   dialog = inject(MatDialog);
   TaskStatus = TaskStatus;
   statusFocus: TaskStatus = TaskStatus.startTask;
   intervalId!: number;
   isPaused: boolean = false;
+  starPomodoro = false;
 
   form: FormGroup = new FormGroup({
     minutes: new FormControl('25'),
@@ -66,8 +68,18 @@ export class FocusContainerComponent {
     return this.statusFocus === TaskStatus.startBreak;
   }
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe((params) => {
+      this.starPomodoro = params['starPomodoro'] === true;
+    });
     this.validateStatus();
+  }
+
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      this.starPomodoro = params['starPomodoro'] === 'true';
+      this.validateStatus();
+    });
   }
 
   validateStatus() {
@@ -80,6 +92,7 @@ export class FocusContainerComponent {
   }
 
   startData() {
+    this.starPomodoro = false;
     this.isPaused = true;
     this.form.patchValue({
       minutes: '25',
@@ -91,7 +104,7 @@ export class FocusContainerComponent {
 
   startTask() {
     this.statusFocus = TaskStatus.running;
-    this.startTimer();
+    this.toggleTimer();
   }
 
   startTimer() {

@@ -1,1 +1,51 @@
-<p>task-list-container works!</p>
+<section class="column align-items-center">
+  <mat-toolbar class="px-12 py-8 width-100 bg-primary justify-content-between">
+    <button
+      mat-icon-button
+      routerLink="./Focus"
+      [queryParams]="{ starPomodoro: true }"
+    >
+      <mat-icon class="color-white">navigate_before</mat-icon>
+    </button>
+    <h1 class="color-white">Tareas</h1>
+    <img width="40" src="/images/avatar.png" alt="avatar" />
+  </mat-toolbar>
+
+  <mat-toolbar
+    class="justify-content-between bg-tertiary mt-28 radius-4 width-paginator px-12"
+  >
+    <button (click)="seeToday(true)" mat-icon-button class="mat-icon-button">
+      <mat-icon>navigate_before</mat-icon>
+    </button>
+    <h3 class="toolbar-text">{{ textNavigation }}</h3>
+    <button (click)="seeToday(false)" mat-icon-button class="mat-icon-button">
+      <mat-icon>navigate_next</mat-icon>
+    </button>
+  </mat-toolbar>
+  @if(isToday){
+  <div class="width-tareas column gap-22 mt-28">
+    <h3 class="title-tareas">Tareas programadas</h3>
+    <div class="column gap-23">
+      @for (tarea of listadoTareas; track $index) {
+      <mat-form-field class="width-form form row justify-content-end">
+        <mat-label>{{ tarea.nombre }}</mat-label>
+        <button
+          routerLink="./Focus"
+          class="button-form"
+          mat-flat-button
+          matSuffix
+        >
+          Iniciar
+        </button>
+        <input matInput />
+      </mat-form-field>
+      }
+    </div>
+  </div>
+  } @else{
+  <div class="column gap-16 align-items-center mt-16">
+    <img width="190" height="175" src="/images/empty.png" />
+    <p class="mat-body-2 text-center">Parece que aún no tienes tareas.</p>
+  </div>
+  }
+</section>
