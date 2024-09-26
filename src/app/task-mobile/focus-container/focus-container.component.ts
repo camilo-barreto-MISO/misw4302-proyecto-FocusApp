@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { ModulosMaterial } from '../../modulos.material';
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 
 enum TaskStatus {
   startTask = 'start',
@@ -17,6 +19,7 @@ enum TaskStatus {
   styleUrls: ['./focus-container.component.scss'],
 })
 export class FocusContainerComponent {
+  dialog = inject(MatDialog);
   TaskStatus = TaskStatus;
   statusFocus: TaskStatus = TaskStatus.startTask;
   intervalId!: number;
@@ -76,6 +79,16 @@ export class FocusContainerComponent {
     }
   }
 
+  startData() {
+    this.isPaused = true;
+    this.form.patchValue({
+      minutes: '25',
+      seconds: '00',
+    });
+    this.statusFocus = TaskStatus.startTask;
+    this.stopTimer();
+  }
+
   startTask() {
     this.statusFocus = TaskStatus.running;
     this.startTimer();
@@ -133,5 +146,15 @@ export class FocusContainerComponent {
     this.statusFocus = TaskStatus.startBreak;
     this.validateStatus();
     this.stopTimer();
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.startData();
+      }
+    });
   }
 }
